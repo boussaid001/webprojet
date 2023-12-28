@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Gamming Time</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <div class="background-video">
+        <video autoplay muted loop id="backgroundVideo">
+          <source src="vdeo_background.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+      <audio autoplay loop controls="false" style="display: none;">
+        <source src="background_sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+  <header>
+    <h1>Web Gamming Time</h1>
+    <input type="text" id="searchBar" placeholder="Search for games" oninput="searchGames()">
+    <div id="welcomeMessage"></div>
+    <button id="loginButton" onclick="openLoginModal()">Login</button>
+  </header>
+
+  <main>
+    <div class="game" onclick="playGame('Tetris')"><img src="logo/Tetris.png" alt="Tetris"></div>
+    <div class="game" onclick="playGame('Snake')"><img src="logo/Snake.jpg" alt="Snake"></div>
+    <div class="game" onclick="playGame('MemoryCard')"><img src="logo/MemoryCard.jpg" alt="MemoryCard"></div>
+
+    <div class="game" onclick="playGame('XO')"><img src="logo/xo.jpg" alt="XO"></div>
+    <div class="game" onclick="playGame('RockPaperScissors')"><img src="logo/RockPaperScissors.jpg" alt="Game 5"></div>
+    <div class="game" onclick="playGame('GLAL')"><img src="https://via.placeholder.com/150" alt="Game 6"></div>
+    <div class="game" onclick="playGame('GLAL')"><img src="https://via.placeholder.com/150" alt="Game 8"></div>
+
+    
+    <div id="gameModal">
+      <iframe id="gameIframe" frameborder="0"></iframe>
+      <button id="closeButton" onclick="closeModal()">Close</button>
+    </div>
+  </main>
+  
+
+  <footer>
+    &copy; 2023 Your Gaming Website
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal">
+    <div id="loginForm">
+      <h2>Login</h2>
+      <div>
+        <form onsubmit="authenticate(event)">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required><br>
+      
+          <label for="password">Password:</label>
+          <input type="password" id="password" required><br>
+      
+          <button type="submit" id="movingButton">Login</button>  </form>
+      
+      </div>
+      
+      <script>
+        var movingButton = document.getElementById("movingButton");
+      
+        movingButton.addEventListener("mouseover", function() {
+          var randomX = Math.floor((Math.random() * window.innerWidth) * 0.4);
+          var randomY = Math.floor(Math.random() * window.innerHeight * 0.4);
+      
+          movingButton.style.opacity = 0;  // Hide the button before moving
+          movingButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+          movingButton.style.opacity = 1;  // Show the button at the new position
+        });
+      
+        movingButton.addEventListener("mouseout", function() {
+          movingButton.style.opacity = 0;  // Hide the button before resetting
+          movingButton.style.transform = "translate(0, 0)";
+          movingButton.style.opacity = 1;  // Show the button at the original position
+        });
+      </script>
+      
+      <button id="loginCloseButton" onclick="closeLoginModal()">Close</button>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
