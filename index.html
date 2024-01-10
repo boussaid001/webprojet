@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.1">
   <title>Frivo</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  
+
+  <link rel="icon" type="image/png"  href="favicon.png">
+  
+  
 </head>
 <body>
 
@@ -26,6 +31,18 @@
     <input type="text" id="searchBar" placeholder="Search for games" oninput="searchGames()">
     <div id="welcomeMessage"></div>
     <button id="loginButton" onclick="openLoginModal()">Login</button>
+    <button id="Q&A" onclick="MoveToQA()">FAQ</button>
+    <script>
+
+      function MoveToQA() {
+      var loginButton = document.getElementById('Q&A');
+
+      window.location.href = 'Q&A/index.html';
+
+      }
+    
+    </script>
+
   </header>
 
   <main>
