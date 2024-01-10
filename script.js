@@ -20,6 +20,12 @@ function playGame(gameName) {
     case 'RockPaperScissors':
       iframe.src = 'RockPaperScissors/index.html';
       break;
+    case 'TwoThousandFortyEight':
+      iframe.src = '2048/index.html';
+      break;
+    case 'space-invaders':
+      iframe.src = 'space-invaders/index.html';
+      break;
     default:
       iframe.src = '404.html';
       break;
@@ -93,17 +99,14 @@ function closeModal() {
   
     if (!hasMatches) {
       if (!noResultsMessage) {
-        // Create a message element if it doesn't exist
         const messageElement = document.createElement('p');
         messageElement.id = 'noResultsMessage';
         messageElement.textContent = 'No matching games found.';
         document.querySelector('main').appendChild(messageElement);
       }
-    } else {
-      // Remove the message element if it exists
-      if (noResultsMessage) {
+    } else      if (noResultsMessage) {
         noResultsMessage.remove();
       }
     }
-  }
+  
   

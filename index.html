@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Gamming Time</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.1">
+  <title>Frivo</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -21,8 +21,8 @@
         Your browser does not support the audio tag.
     </audio>
     
-  <header>
-    <h1>Web Gamming Time</h1>
+    <header>
+    <h1 >Frivo</h1>
     <input type="text" id="searchBar" placeholder="Search for games" oninput="searchGames()">
     <div id="welcomeMessage"></div>
     <button id="loginButton" onclick="openLoginModal()">Login</button>
@@ -35,8 +35,8 @@
 
     <div class="game" onclick="playGame('XO')"><img src="logo/xo.jpg" alt="XO"></div>
     <div class="game" onclick="playGame('RockPaperScissors')"><img src="logo/RockPaperScissors.jpg" alt="Game 5"></div>
-    <div class="game" onclick="playGame('GLAL')"><img src="https://via.placeholder.com/150" alt="Game 6"></div>
-    <div class="game" onclick="playGame('GLAL')"><img src="https://via.placeholder.com/150" alt="Game 8"></div>
+    <div class="game" onclick="playGame('TwoThousandFortyEight')"><img src="logo/2048.jpg" alt="Game 6"></div>
+    <div class="game" onclick="playGame('space-invaders')"><img src="logo/space-invaders.jpg" alt="Game 8"></div>
 
     
     <div id="gameModal">
@@ -47,7 +47,7 @@
   
 
   <footer>
-    &copy; 2023 Your Gaming Website
+    <marquee behavior="" direction="">  &copy;  Frivo : Boussaid Mohamed Amine @PolyTechniqueSousse Projet Web 2023/2024</marquee>
   </footer>
 
   <!-- Login Modal -->
@@ -73,15 +73,15 @@
           var randomX = Math.floor((Math.random() * window.innerWidth) * 0.4);
           var randomY = Math.floor(Math.random() * window.innerHeight * 0.4);
       
-          movingButton.style.opacity = 0;  // Hide the button before moving
+          movingButton.style.opacity = 0;  
           movingButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
-          movingButton.style.opacity = 1;  // Show the button at the new position
+          movingButton.style.opacity = 1; 
         });
       
         movingButton.addEventListener("mouseout", function() {
-          movingButton.style.opacity = 0;  // Hide the button before resetting
+          movingButton.style.opacity = 0; 
           movingButton.style.transform = "translate(0, 0)";
-          movingButton.style.opacity = 1;  // Show the button at the original position
+          movingButton.style.opacity = 1;  
         });
       </script>
       
@@ -90,7 +90,26 @@
   </div>
 
 
-
   <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    let userName = prompt("Please enter your name:");
+
+if (userName !== null) {
+  alert("Hello, " + userName + "! Welcome!");
+} else {
+  alert("You clicked Cancel or closed the prompt.");
+}
+var typed = new Typed('#welcomeMessage', {
+      strings: ["Welcome to Frivo! <span class='highlight'>" + userName + "</span> !"],
+      typeSpeed: 40,
+      loop: true,
+      showCursor: true, // Show the cursor
+      cursorChar: '🎮', // Customize the cursor character
+      cursorBlinking: true
+    });
+    </script>
+
 </body>
 </html>

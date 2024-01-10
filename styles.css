@@ -1,8 +1,22 @@
 
-body, h1, h2, h3, p, ul, li {
+
+
+
+body, h1,h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
+
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Creepster', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease;
+}
+
 .background-video {
   position: fixed;
   top: 0;
@@ -11,7 +25,6 @@ body, h1, h2, h3, p, ul, li {
   height: 100%;
   z-index: -1;
 }
-
 #backgroundVideo {
   width: 100%;
   height: 100%;
@@ -114,6 +127,10 @@ button {
 
 
 main {
+  
+
+  transform: scale(0.7);
+
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
@@ -137,8 +154,19 @@ main {
     margin: 10px auto;
     padding: 10px;
   }
+h1 {
+padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: 'Creepster', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px;
+  animation: fadeInUp 1s ease;
 }
-
+}
 
 @keyframes gradient-animation {
   0% {
@@ -260,4 +288,9 @@ body.modal-open {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.highlight {
+  color: #ff0000; 
+  font-weight: bold;
 }

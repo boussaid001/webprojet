@@ -148,6 +148,7 @@ body{
  
   display: flex;
   margin-bottom: 1px;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
 }
