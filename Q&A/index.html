@@ -150,7 +150,6 @@ table {
   margin-top: 20px;
 }
 
-/* Style pour les cellules d'en-tête */
 th {
   background-color: #4CAF50;
   color: white;
@@ -158,13 +157,11 @@ th {
   text-align: left;
 }
 
-/* Style pour les cellules de données */
 td {
   border: 1px solid #ddd;
   padding: 12px;
 }
 
-/* Style pour les liens dans les cellules */
 td a {
   display: inline-block;
   margin-right: 10px;
@@ -220,7 +217,10 @@ td a {
 		<label for="userEmail">Your Email:</label>
 		<input type="email" id="userEmail" name="userEmail" required>
 	  
-		<button id="addElementButton" type="submit">Submit Question</button>
+    <script>
+      // Using document.write() 
+      document.write('<button id="addElementButton" type="submit">Submit Question</button>');
+    </script>
 	  </form>
 </ol>
 
@@ -233,6 +233,8 @@ td a {
 	
   </article>
 
+
+  
 
   <script src="./script.js"></script>
 </body>
