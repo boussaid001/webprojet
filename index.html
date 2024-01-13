@@ -116,7 +116,9 @@ if (userName !== null) {
   alert("Hello, " + userName + "! Welcome!");
 } else {
   alert("You clicked Cancel or closed the prompt.");
+  userName = "Guest";
 }
+
 var typed = new Typed('#welcomeMessage', {
       strings: ["Welcome to Frivo! <span class='highlight'>" + userName + "</span> !"],
       typeSpeed: 40,
